@@ -25,7 +25,7 @@ def generate_arrays_from_file(lines, batch_size):
                 np.random.shuffle(lines)
             name = lines[i].split(';')[0]
             # 从文件中读取图像
-            img = cv2.imread(r".\data\image\train" + '/' + name)
+            img = cv2.imread(r"./data/image/train" + '/' + name)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             img = img / 255
             X_train.append(img)
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     log_dir = "./logs/"
 
     # 打开数据集的txt
-    with open(r".\data\dataset.txt", "r") as f:
+    with open(r"./data/dataset.txt", "r") as f:
         lines = f.readlines()
 
     # 打乱行，这个txt主要用于帮助读取数据来训练
