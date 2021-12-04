@@ -6,9 +6,11 @@ import numpy as np
 import utils
 import cv2
 from keras import backend as K
+import os
 
 K.set_image_dim_ordering('tf')
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
 def generate_arrays_from_file(lines, batch_size):
     # 获取总长度
