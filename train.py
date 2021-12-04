@@ -89,7 +89,7 @@ if __name__ == "__main__":
                   metrics=['accuracy'])
 
     # 一次的训练集大小
-    batch_size = 128
+    batch_size = 32
 
     print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
 
